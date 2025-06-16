@@ -180,6 +180,32 @@ export const interviewData: Record<
       image: "https://icon2.cleanpng.com/20190122/lpq/kisspng-portable-network-graphics-computer-icons-scalable-font-user-svg-png-icon-free-download-415641-5c46e5fb197069.9389403715481502671042.jpg",
     },
   ],
+   "2025-06-18":[
+    {
+      name: "Anakin",
+      role: "Cyber Security Specialist",
+      time: "10:00 AM",
+      image: "https://icon2.cleanpng.com/20190122/lpq/kisspng-portable-network-graphics-computer-icons-scalable-font-user-svg-png-icon-free-download-415641-5c46e5fb197069.9389403715481502671042.jpg",
+    }, 
+    {
+      name: "Ruby",
+      role: "Cyber Security Specialist",
+      time: "11:00 AM",
+      image: "https://icon2.cleanpng.com/20190122/lpq/kisspng-portable-network-graphics-computer-icons-scalable-font-user-svg-png-icon-free-download-415641-5c46e5fb197069.9389403715481502671042.jpg",
+    }, 
+    {
+      name: "Dooku",
+      role: "Cloud Computing Specialist",
+      time: "12:00 AM",
+      image: "https://icon2.cleanpng.com/20190122/lpq/kisspng-portable-network-graphics-computer-icons-scalable-font-user-svg-png-icon-free-download-415641-5c46e5fb197069.9389403715481502671042.jpg",
+    }, 
+    {
+      name: "Leia",
+      role: "Mechatronics Engineer",
+      time: "12:15 PM",
+      image: "https://icon2.cleanpng.com/20190122/lpq/kisspng-portable-network-graphics-computer-icons-scalable-font-user-svg-png-icon-free-download-415641-5c46e5fb197069.9389403715481502671042.jpg",
+    }, 
+   ], 
   "2025-07-01": [
     {
       name: "Paula",
@@ -300,4 +326,5 @@ export const interviewData: Record<
       image: "https://icon2.cleanpng.com/20190122/lpq/kisspng-portable-network-graphics-computer-icons-scalable-font-user-svg-png-icon-free-download-415641-5c46e5fb197069.9389403715481502671042.jpg",
     },
   ],
+ 
 };

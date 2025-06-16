@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { interviewData } from "../data";
+import { interviewData } from "../../data";
 
 type Props = {
   selectedDate: string;
@@ -16,19 +16,16 @@ const Calendar: React.FC<Props> = ({ selectedDate, setSelectedDate }) => {
   const [tempYear, setTempYear] = useState(year);
 
   const dropdownRef = useRef<HTMLDivElement | null>(null);
+
   const todayKey = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`;
 
   useEffect(() => {
     setSelectedDate(todayKey);
   }, []);
 
-  // Handle click outside dropdown
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setShowDropdown(false);
       }
     };
@@ -54,29 +51,27 @@ const Calendar: React.FC<Props> = ({ selectedDate, setSelectedDate }) => {
     `${year}-${String(month + 1).padStart(2, "0")}-${String(date).padStart(2, "0")}`;
 
   const handlePrev = () => {
-  if (month === 0) {
-    setMonth(11);
-    setYear(year - 1);
-  } else {
-    setMonth(month - 1);
-  }
-};
+    if (month === 0) {
+      setMonth(11);
+      setYear((prev) => prev - 1);
+    } else {
+      setMonth((prev) => prev - 1);
+    }
+  };
 
-const handleNext = () => {
-  if (month === 11) {
-    setMonth(0);
-    setYear(year + 1);
-  } else {
-    setMonth(month + 1);
-  }
-};
+  const handleNext = () => {
+    if (month === 11) {
+      setMonth(0);
+      setYear((prev) => prev + 1);
+    } else {
+      setMonth((prev) => prev + 1);
+    }
+  };
+
   return (
-    <div className="bg-white rounded-md shadow p-4 w-full sm:w-[400px]">
+    <div className="bg-white p-4 rounded-xl shadow-md w-full max-w-md mx-auto ml-4">
       <div className="flex justify-between items-center mb-12">
-        <button
-          onClick={handlePrev}
-          className="p-2 rounded-lg transition"
-        >
+        <button onClick={handlePrev} className="p-2 rounded-lg transition">
           <ChevronLeft className="w-5 h-5" />
         </button>
 
@@ -102,7 +97,9 @@ const handleNext = () => {
                   className="border rounded p-2 w-1/2"
                 >
                   {monthNames.map((m, idx) => (
-                    <option key={m} value={idx}>{m}</option>
+                    <option key={m} value={idx}>
+                      {m}
+                    </option>
                   ))}
                 </select>
                 <input
@@ -134,57 +131,91 @@ const handleNext = () => {
           )}
         </div>
 
-        <button
-          onClick={handleNext}
-          className="p-2 transition"
-        >
+        <button onClick={handleNext} className="p-2 transition">
           <ChevronRight className="w-5 h-5" />
         </button>
       </div>
 
       <div className="grid grid-cols-7 text-center text-sm text-slate-400 mb-3 font-medium">
-        {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(day => (
+        {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day) => (
           <div key={day}>{day}</div>
         ))}
       </div>
 
       <div className="grid grid-cols-7 text-sm text-center gap-2">
-        {Array.from({ length: firstDay }, (_, i) => <div key={"blank" + i} />)}
+        {Array.from({ length: firstDay }, (_, i) => (
+          <div key={"blank" + i} />
+        ))}
 
         {Array.from({ length: daysInMonth }, (_, i) => {
           const date = i + 1;
           const key = getDateKey(date);
           const count = interviewData[key]?.length || 0;
-          const isToday = key === todayKey;
           const isSelected = key === selectedDate;
+          const isToday = key === todayKey;
+
+          const cellDate = new Date(`${year}-${String(month + 1).padStart(2, "0")}-${String(date).padStart(2, "0")}`);
+          const todayDateOnly = new Date();
+          todayDateOnly.setHours(0, 0, 0, 0);
+
+          const isSameMonthAsToday = month === today.getMonth() && year === today.getFullYear();
+          const isBeforeTodayInCurrentMonth = isSameMonthAsToday && cellDate < todayDateOnly;
+          const isTodayOrFuture = cellDate >= todayDateOnly;
+          const isPreviousMonth = year < today.getFullYear() || (year === today.getFullYear() && month < today.getMonth());
+
+          let dotColor = "";
+          if (isPreviousMonth) {
+            dotColor = "";
+          } else if (isBeforeTodayInCurrentMonth) {
+            dotColor = "bg-gray-400";
+          } else {
+            dotColor = "bg-green-400";
+          }
+
+          let dateClasses = "text-sm font-medium ";
+          if (isToday && !isSelected) {
+            dateClasses += "text-blue-500 font-semibold";
+          } else if (isSelected && isToday) {
+            dateClasses += "text-blue-600 font-semibold";
+          } else if (isSelected) {
+            dateClasses += "text-white font-semibold";
+          } else {
+            dateClasses += "text-black";
+          }
+
+          let bgClass = "";
+          if (isSelected && isToday) {
+            bgClass = "ring-2 ring-blue-500 bg-white";
+          } else if (isSelected) {
+            bgClass = "bg-blue-500";
+          } else if (isToday) {
+            bgClass = "ring-2 ring-blue-500";
+          }
 
           return (
             <button
               key={key}
               onClick={() => setSelectedDate(key)}
-              className={`p-2 rounded-full transition duration-150 hover:bg-white/10
-                ${isSelected ? "bg-blue-50 ring-2 ring-blue-500" : ""}
-              `}
+              className={`p-2 rounded-full transition duration-150 cursor-pointer ${
+                isSelected ? bgClass : "hover:bg-blue-100"
+              }`}
             >
-              <div
-                className={`text-sm font-medium
-                  ${isSelected ? "text-blue-600 font-semibold" : isToday ? "text-red-500 font-semibold" : "text-black"}
-                `}
-              >
-                {date}
-              </div>
-              <div className="flex justify-center mt-1 space-x-0.5">
-                {Array.from({ length: Math.min(count, 3) }).map((_, j) => (
-                  <div key={j} className="w-1.5 h-1.5 bg-green-400 rounded-full" />
-                ))}
-              </div>
+              <div className={dateClasses}>{date}</div>
+              {dotColor && (
+                <div className="flex justify-center mt-1 space-x-0.5">
+                  {Array.from({ length: Math.min(count, 3) }).map((_, j) => (
+                    <div key={j} className={`w-1.5 h-1.5 rounded-full ${dotColor}`} />
+                  ))}
+                </div>
+              )}
             </button>
           );
         })}
 
-        {Array.from({ length: (7 - (firstDay + daysInMonth) % 7) % 7 }, (_, i) => (
-          <div key={"post-blank" + i} />
-        ))}
+        {Array.from(
+          { length: (7 - (firstDay + daysInMonth) % 7) % 7 },
+          (_, i) => <div key={"post-blank" + i} />
+        )}
       </div>
     </div>
   );
