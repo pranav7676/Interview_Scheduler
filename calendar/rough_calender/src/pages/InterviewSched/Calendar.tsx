@@ -89,12 +89,12 @@ const Calendar: React.FC<Props> = ({ selectedDate, setSelectedDate }) => {
 
           {showDropdown && (
             <div className="absolute left-1/2 transform -translate-x-1/2 top-10 bg-white text-black rounded-lg shadow-lg p-4 z-10 w-64">
-              <h3 className="text-sm font-medium mb-2">Select Month & Year</h3>
-              <div className="flex gap-2 mb-3">
+              <h3 className="text-sm font-medium mb-3">Select Month & Year</h3>
+              <div className="flex gap-2 mb-4">
                 <select
                   value={tempMonth}
                   onChange={(e) => setTempMonth(parseInt(e.target.value))}
-                  className="border rounded p-2 w-1/2"
+                  className="border rounded p-2 w-3/5"
                 >
                   {monthNames.map((m, idx) => (
                     <option key={m} value={idx}>

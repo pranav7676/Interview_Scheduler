@@ -2,14 +2,15 @@ import React, { useEffect, useState } from "react";
 import Calendar from "../pages/InterviewSched/Calendar";
 import InterviewDetails from "../pages/InterviewSched/InterviewDetails";
 import CandidateTable from "./InterviewSched/CandidateTable";
+import ScheduleInterviewModal from "./InterviewSched/ScheduleInterviewModal"; // 👈 Add this line
 
 function InterviewSched() {
-  // Load initial date from localStorage or fallback to a default
   const [selectedDate, setSelectedDate] = useState(() => {
     return localStorage.getItem("selectedDate") || "2025-05-19";
   });
 
-  // Store selectedDate in localStorage whenever it changes
+  const [showModal, setShowModal] = useState(false); // 👈 Modal state
+
   useEffect(() => {
     localStorage.setItem("selectedDate", selectedDate);
   }, [selectedDate]);
@@ -19,7 +20,10 @@ function InterviewSched() {
       {/* Header */}
       <div className="flex justify-between items-center px-9 py-6">
         <h1 className="text-xl font-bold">Interviews</h1>
-        <button className="bg-blue-700 text-white px-3 py-2 rounded hover:bg-blue-800 transition">
+        <button
+          className="bg-blue-700 text-white px-3 py-2 rounded hover:bg-blue-800 transition"
+          onClick={() => setShowModal(true)} // 👈 Open modal
+        >
           + Schedule Interview
         </button>
       </div>
@@ -32,12 +36,17 @@ function InterviewSched() {
         </div>
       </main>
 
-      {/* Candidate Table (aligned properly) */}
+      {/* Candidate Table */}
       <div className="flex justify-center">
         <div className="p-9 pt-0 max-w-[1100px] w-full">
           <CandidateTable />
         </div>
       </div>
+
+      {/* Modal Component */}
+      {showModal && (
+        <ScheduleInterviewModal onClose={() => setShowModal(false)} />
+      )}
     </div>
   );
 }

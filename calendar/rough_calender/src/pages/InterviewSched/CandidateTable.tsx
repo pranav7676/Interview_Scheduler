@@ -97,7 +97,7 @@ const CandidateTable: React.FC = () => {
       </div>
 
       <div className="overflow-x-auto rounded-lg">
-        <table className="min-w-full text-sm text-left border-separate border-spacing-y-2">
+        <table className="min-w-full text-sm text-left">
           <thead className={`bg-gradient-to-r ${softGradient} text-white`}>
             <tr>
               <th className="px-4 py-3">
@@ -117,7 +117,7 @@ const CandidateTable: React.FC = () => {
             {currentData.map((candidate: Candidate) => (
               <tr
                 key={candidate.id}
-                className="bg-white hover:bg-blue-50 shadow-sm transition rounded-lg"
+                className="bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-200 rounded-xl"
               >
                 <td className="px-4 py-3">
                   <input
