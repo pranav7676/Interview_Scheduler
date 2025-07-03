@@ -1,0 +1,353 @@
+[
+  {
+    "id": "S0001",
+    "candidate": {
+      "name": "Darshan",
+      "email": "cdarshan@gmail.com",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsw40RqD54BYg7g04mBOm0f2k24h2hhn8-gg&s"
+    },
+    "jobId": "J10011",
+    "jobTitle": "Sr. Java Developer",
+    "jobType": "Full-time",
+    "jobLocation": "Chennai",
+    "workMode": "On-site",
+    "experience": "2",
+    "salary": "40,000",
+    "phone": "+91 7885421963",
+    "location": "Hyderabad",
+    "skills": ["Java", "Spring Boot", "HTML", "JS"],
+    "interviewer": "Richard",
+    "datetime": "2024-02-15T13:30",
+    "round": "Technical",
+    "mode": "In-Person",
+    "status": "Completed"
+  },
+  {
+    "id": "S0002",
+    "candidate": {
+      "name": "Smith",
+      "email": "smith99@gmail.com",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsw40RqD54BYg7g04mBOm0f2k24h2hhn8-gg&s"
+    },
+    "jobId": "J10012",
+    "jobTitle": "Frontend Developer",
+    "jobType": "Part-time",
+    "jobLocation": "Bangalore",
+    "workMode": "Remote",
+    "experience": "1",
+    "salary": "25,000",
+    "phone": "+91 9001234567",
+    "location": "Delhi",
+    "skills": ["React", "CSS", "HTML", "JS"],
+    "interviewer": "Emily",
+    "datetime": "2024-05-03T14:30",
+    "round": "HR",
+    "mode": "Online",
+    "status": "Pending"
+  },
+  {
+    "id": "S0003",
+    "candidate": {
+      "name": "Julie",
+      "email": "julie@gmail.com",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsw40RqD54BYg7g04mBOm0f2k24h2hhn8-gg&s"
+    },
+    "jobId": "J10011",
+    "jobTitle": "Backend Developer",
+    "jobType": "Full-time",
+    "jobLocation": "Mumbai",
+    "workMode": "On-site",
+    "experience": "3",
+    "salary": "45,000",
+    "phone": "+91 8887654321",
+    "location": "Mumbai",
+    "skills": ["Node.js", "MongoDB", "Express", "JavaScript"],
+    "interviewer": "Sarah",
+    "datetime": "2024-08-05T12:00",
+    "round": "Final",
+    "mode": "In-Person",
+    "status": "Pending"
+  },
+  {
+    "id": "S0004",
+    "candidate": {
+      "name": "Sam",
+      "email": "sam99@gmail.com",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsw40RqD54BYg7g04mBOm0f2k24h2hhn8-gg&s"
+    },
+    "jobId": "J10011",
+    "jobTitle": "UI/UX Designer",
+    "jobType": "Full-time",
+    "jobLocation": "Hyderabad",
+    "workMode": "Remote",
+    "experience": "2",
+    "salary": "38,000",
+    "phone": "+91 9998887776",
+    "location": "Pune",
+    "skills": ["Figma", "Adobe XD", "CSS", "Tailwind"],
+    "interviewer": "Johnson",
+    "datetime": "2024-09-21T13:30",
+    "round": "HR",
+    "mode": "Online",
+    "status": "Completed"
+  },
+  {
+    "id": "S0005",
+    "candidate": {
+      "name": "Anita",
+      "email": "anita@gmail.com",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsw40RqD54BYg7g04mBOm0f2k24h2hhn8-gg&s"
+    },
+    "jobId": "J10013",
+    "jobTitle": "DevOps Engineer",
+    "jobType": "Full-time",
+    "jobLocation": "Chennai",
+    "workMode": "On-site",
+    "experience": "4",
+    "salary": "60,000",
+    "phone": "+91 7894561230",
+    "location": "Chennai",
+    "skills": ["AWS", "Docker", "Kubernetes", "Linux"],
+    "interviewer": "Tom",
+    "datetime": "2024-10-12T10:00",
+    "round": "Technical",
+    "mode": "In-Person",
+    "status": "Pending"
+  },
+  {
+    "id": "S0006",
+    "candidate": {
+      "name": "Ravi",
+      "email": "ravi@gmail.com",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsw40RqD54BYg7g04mBOm0f2k24h2hhn8-gg&s"
+    },
+    "jobId": "J10014",
+    "jobTitle": "Data Analyst",
+    "jobType": "Contract",
+    "jobLocation": "Pune",
+    "workMode": "Remote",
+    "experience": "3",
+    "salary": "50,000",
+    "phone": "+91 7775553331",
+    "location": "Hyderabad",
+    "skills": ["Python", "SQL", "Tableau", "Excel"],
+    "interviewer": "Anjali",
+    "datetime": "2024-11-03T11:15",
+    "round": "Final",
+    "mode": "Online",
+    "status": "Completed"
+  },
+  {
+    "id": "S0007",
+    "candidate": {
+      "name": "Priya",
+      "email": "priya@gmail.com",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsw40RqD54BYg7g04mBOm0f2k24h2hhn8-gg&s"
+    },
+    "jobId": "J10015",
+    "jobTitle": "Machine Learning Engineer",
+    "jobType": "Full-time",
+    "jobLocation": "Bangalore",
+    "workMode": "On-site",
+    "experience": "2",
+    "salary": "65,000",
+    "phone": "+91 8547123650",
+    "location": "Bangalore",
+    "skills": ["Python", "TensorFlow", "Pandas", "Scikit-learn"],
+    "interviewer": "Suresh",
+    "datetime": "2024-12-01T09:45",
+    "round": "Technical",
+    "mode": "In-Person",
+    "status": "Completed"
+  },
+  {
+    "id": "S0008",
+    "candidate": {
+      "name": "John",
+      "email": "john@gmail.com",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsw40RqD54BYg7g04mBOm0f2k24h2hhn8-gg&s"
+    },
+    "jobId": "J10016",
+    "jobTitle": "Cloud Engineer",
+    "jobType": "Full-time",
+    "jobLocation": "Kochi",
+    "workMode": "Remote",
+    "experience": "4",
+    "salary": "72,000",
+    "phone": "+91 9098765432",
+    "location": "Kochi",
+    "skills": ["Azure", "GCP", "Linux", "DevOps"],
+    "interviewer": "Rita",
+    "datetime": "2025-01-10T15:00",
+    "round": "HR",
+    "mode": "Online",
+    "status": "Pending"
+  },
+  {
+    "id": "S0009",
+    "candidate": {
+      "name": "Ayesha",
+      "email": "ayesha@gmail.com",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsw40RqD54BYg7g04mBOm0f2k24h2hhn8-gg&s"
+    },
+    "jobId": "J10017",
+    "jobTitle": "Business Analyst",
+    "jobType": "Part-time",
+    "jobLocation": "Delhi",
+    "workMode": "On-site",
+    "experience": "3",
+    "salary": "55,000",
+    "phone": "+91 9632587410",
+    "location": "Delhi",
+    "skills": ["Excel", "Power BI", "Python", "Agile"],
+    "interviewer": "Vikram",
+    "datetime": "2025-02-14T10:30",
+    "round": "Final",
+    "mode": "In-Person",
+    "status": "Completed"
+  },
+  {
+    "id": "S0010",
+    "candidate": {
+      "name": "George",
+      "email": "george@gmail.com",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsw40RqD54BYg7g04mBOm0f2k24h2hhn8-gg&s"
+    },
+    "jobId": "J10018",
+    "jobTitle": "QA Engineer",
+    "jobType": "Full-time",
+    "jobLocation": "Noida",
+    "workMode": "Hybrid",
+    "experience": "2",
+    "salary": "42,000",
+    "phone": "+91 7011122233",
+    "location": "Noida",
+    "skills": ["Selenium", "Postman", "JIRA", "Java"],
+    "interviewer": "Sneha",
+    "datetime": "2025-03-03T11:00",
+    "round": "Technical",
+    "mode": "Online",
+    "status": "Completed"
+  },
+  {
+    "id": "S0011",
+    "candidate": {
+      "name": "Kavya",
+      "email": "kavya@gmail.com",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsw40RqD54BYg7g04mBOm0f2k24h2hhn8-gg&s"
+    },
+    "jobId": "J10019",
+    "jobTitle": "React Developer",
+    "jobType": "Full-time",
+    "jobLocation": "Chandigarh",
+    "workMode": "Remote",
+    "experience": "1",
+    "salary": "35,000",
+    "phone": "+91 7023344556",
+    "location": "Chandigarh",
+    "skills": ["React", "Redux", "Tailwind", "JS"],
+    "interviewer": "Raj",
+    "datetime": "2025-04-22T14:00",
+    "round": "Final",
+    "mode": "In-Person",
+    "status": "Pending"
+  },
+  {
+    "id": "S0012",
+    "candidate": {
+      "name": "Liam",
+      "email": "liam@gmail.com",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsw40RqD54BYg7g04mBOm0f2k24h2hhn8-gg&s"
+    },
+    "jobId": "J10020",
+    "jobTitle": "Python Developer",
+    "jobType": "Contract",
+    "jobLocation": "Kolkata",
+    "workMode": "Remote",
+    "experience": "3",
+    "salary": "58,000",
+    "phone": "+91 8976543210",
+    "location": "Kolkata",
+    "skills": ["Python", "Flask", "SQL", "API"],
+    "interviewer": "Meera",
+    "datetime": "2025-05-08T16:00",
+    "round": "HR",
+    "mode": "Online",
+    "status": "Completed"
+  },
+  {
+    "id": "S0013",
+    "candidate": {
+      "name": "Sana",
+      "email": "sana@gmail.com",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsw40RqD54BYg7g04mBOm0f2k24h2hhn8-gg&s"
+    },
+    "jobId": "J10021",
+    "jobTitle": "Flutter Developer",
+    "jobType": "Full-time",
+    "jobLocation": "Trivandrum",
+    "workMode": "On-site",
+    "experience": "2",
+    "salary": "48,000",
+    "phone": "+91 8123456789",
+    "location": "Trivandrum",
+    "skills": ["Flutter", "Dart", "Firebase", "UI"],
+    "interviewer": "Kiran",
+    "datetime": "2025-06-12T10:00",
+    "round": "Technical",
+    "mode": "In-Person",
+    "status": "Pending"
+  },
+  {
+    "id": "S0014",
+    "candidate": {
+      "name": "Rahul",
+      "email": "rahul@gmail.com",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsw40RqD54BYg7g04mBOm0f2k24h2hhn8-gg&s"
+    },
+    "jobId": "J10022",
+    "jobTitle": "System Analyst",
+    "jobType": "Full-time",
+    "jobLocation": "Nagpur",
+    "workMode": "On-site",
+    "experience": "5",
+    "salary": "66,000",
+    "phone": "+91 9765432100",
+    "location": "Nagpur",
+    "skills": ["System Design", "SQL", "Flowcharts", "SDLC"],
+    "interviewer": "Nisha",
+    "datetime": "2025-07-01T13:00",
+    "round": "HR",
+    "mode": "Online",
+    "status": "Completed"
+  },
+  {
+    "id": "S0015",
+    "candidate": {
+      "name": "Emma",
+      "email": "emma@gmail.com",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsw40RqD54BYg7g04mBOm0f2k24h2hhn8-gg&s"
+    },
+    "jobId": "J10023",
+    "jobTitle": "Full Stack Developer",
+    "jobType": "Full-time",
+    "jobLocation": "Jaipur",
+    "workMode": "Hybrid",
+    "experience": "3",
+    "salary": "70,000",
+    "phone": "+91 9898989898",
+    "location": "Jaipur",
+    "skills": ["React", "Node.js", "MongoDB", "Tailwind"],
+    "interviewer": "Amit",
+    "datetime": "2025-08-20T09:30",
+    "round": "Final",
+    "mode": "In-Person",
+    "status": "Pending"
+  }
+]
+
+
+
+
+
+

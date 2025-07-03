@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Calendar from "../pages/InterviewSched/Calendar";
 import InterviewDetails from "../pages/InterviewSched/InterviewDetails";
-import CandidateTable from "./InterviewSched/CandidateTable";
-import ScheduleInterviewModal from "./InterviewSched/ScheduleInterviewModal"; // 👈 Add this line
+// Update the import path if CandidateTable is in a different directory
+
+import ScheduleInterviewModal from "./InterviewSched/ScheduleInterviewModal"; 
+import CandidateTableSection from "../components/CandidateTableSection";
+
 
 function InterviewSched() {
   const [selectedDate, setSelectedDate] = useState(() => {
@@ -22,7 +25,7 @@ function InterviewSched() {
         <h1 className="text-xl font-bold">Interviews</h1>
         <button
           className="bg-blue-700 text-white px-3 py-2 rounded hover:bg-blue-800 transition"
-          onClick={() => setShowModal(true)} // 👈 Open modal
+          onClick={() => setShowModal(true)} 
         >
           + Schedule Interview
         </button>
@@ -35,17 +38,20 @@ function InterviewSched() {
           <InterviewDetails selectedDate={selectedDate} />
         </div>
       </main>
+       <CandidateTableSection />
 
-      {/* Candidate Table */}
-      <div className="flex justify-center">
-        <div className="p-9 pt-0 max-w-[1100px] w-full">
-          <CandidateTable />
-        </div>
-      </div>
+      
+      
 
       {/* Modal Component */}
       {showModal && (
-        <ScheduleInterviewModal onClose={() => setShowModal(false)} />
+        <ScheduleInterviewModal 
+          onClose={() => setShowModal(false)} 
+          onSchedule={(newInterview) => {
+            // TODO: handle the scheduled interview (e.g., update state or make API call)
+            setShowModal(false);
+          }} 
+        />
       )}
     </div>
   );
